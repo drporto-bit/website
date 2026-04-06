@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkinCare.MD | Dr. Dennis Porto — Virtual Dermatologist</title>
+<meta name="description" content="Dr. Dennis Porto, MD, MPH, FAAD — Board-certified dermatologist. Virtual dermatology consults available in New York and 8+ other states.">
+<meta property="og:title" content="SkinCare.MD | Dr. Dennis Porto">
+<meta property="og:description" content="Board-certified dermatologist. Virtual consults available in 9+ states.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.skincare.md">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:      #F7F4EF;
+  --cream-dark: #EDE8DF;
+  --white:      #FFFFFF;
+  --ink:        #1A1A18;
+  --ink-mid:    #47453F;
+  --ink-light:  #87847C;
+  --gold:       #A07840;
+  --gold-light: #C4A070;
+  --border:     rgba(26,26,24,0.10);
+  --border-mid: rgba(26,26,24,0.18);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --focus-ring: 0 0 0 3px rgba(160,120,64,0.5);
+  --nav-h: 68px;
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--sans); background: var(--cream); color: var(--ink); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+.skip-link {
+  position: absolute; top: -999px; left: 1rem;
+  background: var(--ink); color: var(--white);
+  font-size: 13px; font-weight: 500;
+  padding: 10px 18px; border-radius: 4px;
+  z-index: 9999; text-decoration: none;
+}
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 3px; }
+a:focus-visible, button:focus-visible { border-radius: 4px; }
+
+h1, h2, h3, h4 { line-height: 1.1; font-weight: 400; }
+p { font-weight: 300; color: var(--ink-mid); }
+
+/* NAV */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: rgba(247,244,239,0.94);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid var(--border);
+  z-index: 200;
+}
+.nav-inner {
+  max-width: 1060px; margin: 0 auto; padding: 0 2rem;
+  height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+}
+.nav-logo { font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: 0.22em; color: var(--ink); text-decoration: none; flex-shrink: 0; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 12px; font-weight: 400; letter-spacing: 0.07em; color: var(--ink-mid); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-book { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; padding: 10px 22px; background: var(--ink); color: var(--white); border-radius: 100px; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+.nav-book:hover { background: var(--ink-mid); }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; border-radius: 4px; }
+.nav-toggle span { width: 22px; height: 1px; background: var(--ink); display: block; transition: transform 0.3s, opacity 0.3s; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.mobile-nav { display: none; flex-direction: column; background: var(--cream); border-bottom: 0.5px solid var(--border); padding: 1.25rem 2rem 1.75rem; gap: 1.25rem; position: fixed; top: var(--nav-h); left: 0; right: 0; z-index: 199; }
+.mobile-nav.open { display: flex; }
+.mobile-nav a { font-size: 15px; font-weight: 300; color: var(--ink-mid); text-decoration: none; letter-spacing: 0.04em; }
+.mobile-nav a:last-child { color: var(--ink); font-weight: 500; }
+
+/* LAYOUT */
+.container { max-width: 1060px; margin: 0 auto; padding: 0 2rem; }
+.section { padding: 7rem 0; }
+.section-eyebrow { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+.section-heading { font-family: var(--serif); font-size: clamp(32px, 4vw, 48px); font-weight: 300; color: var(--ink); line-height: 1.1; margin-bottom: 2.5rem; }
+
+/* HERO */
+.hero { padding-top: var(--nav-h); min-height: 100svh; display: flex; align-items: center; border-bottom: 0.5px solid var(--border); }
+.hero-inner { max-width: 1060px; margin: 0 auto; padding: 6rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
+.hero-eyebrow { font-size: 11px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; display: block; }
+.hero-name { font-family: var(--serif); font-size: clamp(44px, 6vw, 72px); font-weight: 300; color: var(--ink); margin-bottom: 0.25rem; line-height: 1.05; }
+.hero-name em { font-style: italic; }
+.hero-sub { font-size: 13px; font-weight: 400; letter-spacing: 0.1em; color: var(--ink-light); margin-bottom: 2rem; }
+.hero-desc { font-size: 16px; font-weight: 300; color: var(--ink-mid); line-height: 1.8; margin-bottom: 2.5rem; max-width: 440px; }
+.btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+.btn-primary { display: inline-flex; align-items: center; padding: 14px 28px; background: var(--ink); color: var(--white); font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; border-radius: 100px; text-decoration: none; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--ink-mid); transform: translateY(-1px); }
+.btn-secondary { display: inline-flex; align-items: center; padding: 14px 28px; background: transparent; color: var(--ink); font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; border-radius: 100px; border: 0.5px solid var(--border-mid); text-decoration: none; transition: border-color 0.2s, transform 0.15s; }
+.btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
+.hero-aside { border-left: 0.5px solid var(--border); padding-left: 4rem; display: flex; flex-direction: column; gap: 2.5rem; }
+.aside-num { font-family: var(--serif); font-size: 48px; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.25rem; }
+.aside-label { font-size: 11px; letter-spacing: 0.14em; color: var(--ink-light); text-transform: uppercase; }
+.aside-divider { width: 100%; height: 0.5px; background: var(--border); border: none; }
+
+/* CRED STRIP */
+.cred-strip { background: var(--ink); }
+.cred-strip-inner { max-width: 1060px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.cred-strip-lead { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.3); text-transform: uppercase; flex-shrink: 0; margin-right: 0.5rem; }
+.cred-list { display: flex; align-items: center; flex-wrap: wrap; list-style: none; }
+.cred-list li { font-size: 11px; letter-spacing: 0.12em; color: rgba(255,255,255,0.65); display: flex; align-items: center; }
+.cred-list li + li::before { content: ''; display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: var(--gold-light); margin: 0 1rem; flex-shrink: 0; }
+
+/* SERVICES */
+.services-section { border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 0.5px solid var(--border); }
+.service-card { border-right: 0.5px solid var(--border); padding: 3rem 2.5rem; display: flex; flex-direction: column; transition: background 0.25s; }
+.service-card:hover { background: var(--white); }
+.service-n { font-size: 11px; letter-spacing: 0.16em; color: var(--gold); margin-bottom: 2rem; }
+.service-title { font-family: var(--serif); font-size: 28px; font-weight: 300; color: var(--ink); margin-bottom: 0.75rem; line-height: 1.15; }
+.service-desc { font-size: 14px; font-weight: 300; color: var(--ink-mid); line-height: 1.8; flex: 1; margin-bottom: 2rem; }
+.service-link { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+.service-link:hover { gap: 10px; }
+.service-link::after { content: '→'; }
+
+/* ABOUT */
+.about-section { background: var(--white); }
+.about-inner { display: grid; grid-template-columns: 5fr 7fr; gap: 6rem; align-items: start; }
+.stat-block { display: flex; flex-direction: column; gap: 0; border: 0.5px solid var(--border); }
+.stat-row-item { padding: 1.75rem 2rem; border-bottom: 0.5px solid var(--border); }
+.stat-row-item:last-child { border-bottom: none; }
+.stat-num { font-family: var(--serif); font-size: 42px; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.2rem; }
+.stat-label { font-size: 11px; letter-spacing: 0.12em; color: var(--ink-light); text-transform: uppercase; }
+.about-right .section-heading { margin-bottom: 1.5rem; }
+.about-right p { font-size: 15px; font-weight: 300; color: var(--ink-mid); line-height: 1.85; margin-bottom: 1.1rem; }
+.about-right a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+.about-right a:hover { color: var(--ink); }
+
+/* CONSULT */
+.consult-section { background: var(--ink); }
+.consult-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; padding: 7rem 2rem; max-width: 1060px; margin: 0 auto; }
+.consult-section .section-eyebrow { color: var(--gold-light); }
+.consult-section .section-heading { color: var(--white); }
+.consult-desc { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.85; margin-bottom: 2rem; }
+.btn-gold { display: inline-flex; align-items: center; padding: 14px 28px; background: var(--gold); color: var(--white); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; border-radius: 100px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+.states-block { border-top: 0.5px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem; }
+.states-label { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.3); text-transform: uppercase; margin-bottom: 1rem; display: block; }
+.states-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.state-pill { font-size: 11px; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 100px; border: 0.5px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.55); }
+.consult-quote { border-left: 1px solid rgba(255,255,255,0.12); padding-left: 3rem; }
+.consult-quote blockquote { font-family: var(--serif); font-size: clamp(26px, 3vw, 38px); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.85); line-height: 1.35; margin-bottom: 1.5rem; }
+.consult-quote cite { font-size: 12px; font-style: normal; letter-spacing: 0.12em; color: rgba(255,255,255,0.3); }
+
+/* FOOTER */
+.site-footer { background: var(--ink); padding: 3.5rem 0; border-top: 0.5px solid rgba(255,255,255,0.06); }
+.footer-inner { max-width: 1060px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+.footer-logo { font-size: 12px; font-weight: 500; letter-spacing: 0.22em; color: var(--white); text-decoration: none; }
+.footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
+.footer-links a { font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(255,255,255,0.75); }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); width: 100%; }
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .nav-links, .nav-book { display: none; }
+  .nav-toggle { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-aside { border-left: none; border-top: 0.5px solid var(--border); padding-left: 0; padding-top: 2.5rem; flex-direction: row; flex-wrap: wrap; gap: 2rem; }
+  .aside-divider { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .about-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+  .stat-block { flex-direction: row; }
+  .stat-row-item { border-bottom: none; border-right: 0.5px solid var(--border); flex: 1; }
+  .stat-row-item:last-child { border-right: none; }
+  .consult-inner { grid-template-columns: 1fr; gap: 3.5rem; }
+  .consult-quote { border-left: none; border-top: 0.5px solid rgba(255,255,255,0.1); padding-left: 0; padding-top: 2.5rem; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 520px) {
+  .stat-block { flex-direction: column; }
+  .stat-row-item { border-right: none; border-bottom: 0.5px solid var(--border); }
+  .stat-row-item:last-child { border-bottom: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header role="banner">
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="SkinCare.MD — home">SKINCARE.MD</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#consult">Virtual consult</a></li>
+      </ul>
+      <a href="https://app.futureclinic.com/clinics/drporto/profile" class="nav-book" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book now</a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileNav(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#about" onclick="closeMobileNav()">About</a>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#consult" onclick="closeMobileNav()">Virtual consult</a>
+    <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener" onclick="closeMobileNav()">Book now →</a>
+  </nav>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <span class="hero-eyebrow">Virtual dermatology · New York &amp; beyond</span>
+        <h1 class="hero-name" id="hero-heading">Dennis A.<br><em>Porto</em>, MD</h1>
+        <p class="hero-sub">MPH · FAAD · Harvard Alum · Mount Sinai Faculty</p>
+        <p class="hero-desc">Board-certified dermatologist offering expert virtual skin care across 9+ states. Diagnosis, prescriptions, and follow-up — all from your phone.</p>
+        <div class="btn-row">
+          <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-primary" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book a virtual consult</a>
+          <a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" class="btn-secondary" target="_blank" rel="noopener" aria-label="Shop physician skincare products (opens in new tab)">Skincare products</a>
+        </div>
+      </div>
+      <div class="hero-aside" aria-label="Practice highlights">
+        <div class="aside-block">
+          <div class="aside-num">1,000+</div>
+          <div class="aside-label">Skin cancer surgeries</div>
+        </div>
+        <hr class="aside-divider" aria-hidden="true">
+        <div class="aside-block">
+          <div class="aside-num">Dozens</div>
+          <div class="aside-label">Publications &amp; textbook chapters</div>
+        </div>
+        <hr class="aside-divider" aria-hidden="true">
+        <div class="aside-block">
+          <div class="aside-num">9+</div>
+          <div class="aside-label">States licensed to practice</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRED STRIP -->
+  <div class="cred-strip" role="complementary" aria-label="Credentials and honors">
+    <div class="cred-strip-inner">
+      <span class="cred-strip-lead" aria-hidden="true">Credentials</span>
+      <ul class="cred-list" role="list">
+        <li>FAAD</li>
+        <li>Harvard grad, MPH</li>
+        <li>Board-certified Mohs surgeon</li>
+        <li>Golden Scalpel award</li>
+        <li>Mount Sinai faculty</li>
+        <li>Alpha Omega Alpha</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" class="services-section" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="section" style="padding-bottom:0;">
+        <span class="section-eyebrow">What we offer</span>
+        <h2 class="section-heading" id="services-heading">Expert care,<br>wherever you are</h2>
+      </div>
+    </div>
+    <div class="container" style="padding-bottom:7rem;">
+      <div class="services-grid" role="list">
+        <article class="service-card" role="listitem">
+          <div class="service-n" aria-hidden="true">01</div>
+          <h3 class="service-title">Virtual consult</h3>
+          <p class="service-desc">Message Dr. Porto any time for a diagnosis, prescription, product recommendation, or to track your treatment progress — no waiting room, no commute.</p>
+          <a href="https://app.futureclinic.com/clinics/drporto/profile" class="service-link" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book now</a>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-n" aria-hidden="true">02</div>
+          <h3 class="service-title">Skin conditions</h3>
+          <p class="service-desc">Acne, rosacea, eczema, psoriasis, hair loss, skin cancer screening, and more. Get a board-certified diagnosis and treatment plan without leaving home.</p>
+          <a href="https://app.futureclinic.com/clinics/drporto/profile" class="service-link" target="_blank" rel="noopener" aria-label="Get started with a virtual consultation (opens in new tab)">Get started</a>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-n" aria-hidden="true">03</div>
+          <h3 class="service-title">Physician skincare</h3>
+          <p class="service-desc">Curated, physician-formulated products hand-selected by Dr. Porto to complement your treatment plan and support lasting skin health.</p>
+          <a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" class="service-link" target="_blank" rel="noopener" aria-label="Shop physician skincare products (opens in new tab)">Shop now</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about-section" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section">
+        <div class="about-inner">
+          <div class="about-left">
+            <span class="section-eyebrow">The physician</span>
+            <div class="stat-block" role="list" aria-label="Practice statistics">
+              <div class="stat-row-item" role="listitem">
+                <div class="stat-num">1,000+</div>
+                <div class="stat-label">Skin cancer surgeries</div>
+              </div>
+              <div class="stat-row-item" role="listitem">
+                <div class="stat-num">Dozens</div>
+                <div class="stat-label">Publications</div>
+              </div>
+              <div class="stat-row-item" role="listitem">
+                <div class="stat-num">9+</div>
+                <div class="stat-label">States licensed</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-right">
+            <h2 class="section-heading" id="about-heading">Trained at the top,<br>practicing where<br><em style="font-family:var(--serif);font-style:italic;">you need him</em></h2>
+            <p>Dr. Porto graduated at the top of his class from the University of Iowa College of Medicine, earning membership in the <a href="https://www.alphaomegaalpha.org/" target="_blank" rel="noopener">Alpha Omega Alpha honor society</a>. He completed a skin cancer research fellowship and later a Master of Public Health at Harvard, where he was awarded the Lewis Hackett Scholarship.</p>
+            <p>After completing internship and a three-year dermatology residency, Dr. Porto pursued advanced subspecialty fellowship training in <a href="https://www.mohs.surgery" target="_blank" rel="noopener">Mohs micrographic surgery</a> — the most precise technique for skin cancer removal — and is double board-certified in both dermatology and Mohs surgery.</p>
+            <p>He is co-author and editor of <a href="https://www.amazon.com/Botulinum-Toxins-Cosmetic-Clinical-Applications/dp/1444338250/" target="_blank" rel="noopener">the definitive textbook on botulinum toxins</a>, author of dozens of peer-reviewed articles, and a recipient of the <strong style="font-weight:500;color:var(--ink);">Golden Scalpel</strong> from the American Society for Dermatologic Surgery. He holds a faculty appointment at Mount Sinai, where he teaches skin cancer surgery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULT -->
+  <section id="consult" class="consult-section" aria-labelledby="consult-heading">
+    <div class="consult-inner">
+      <div class="consult-left">
+        <span class="section-eyebrow">Virtual dermatology</span>
+        <h2 class="section-heading" id="consult-heading">Your personal dermatologist,<br>in your pocket</h2>
+        <p class="consult-desc">Message Dr. Porto any time — for a diagnosis, a prescription, a skincare recommendation, or to follow your progress. Expert dermatology, no waiting room required.</p>
+        <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-gold" target="_blank" rel="noopener" aria-label="Start a virtual consult (opens in new tab)">Start a consult</a>
+        <div class="states-block">
+          <span class="states-label">Licensed to practice in</span>
+          <ul class="states-pills" role="list" aria-label="States where Dr. Porto is licensed">
+            <li class="state-pill" role="listitem">New York</li>
+            <li class="state-pill" role="listitem">Massachusetts</li>
+            <li class="state-pill" role="listitem">California</li>
+            <li class="state-pill" role="listitem">Virginia</li>
+            <li class="state-pill" role="listitem">Maryland</li>
+            <li class="state-pill" role="listitem">New Jersey</li>
+            <li class="state-pill" role="listitem">New Hampshire</li>
+            <li class="state-pill" role="listitem">Hawaii</li>
+            <li class="state-pill" role="listitem">Pennsylvania</li>
+            <li class="state-pill" role="listitem">+ more soon</li>
+          </ul>
+        </div>
+      </div>
+      <div class="consult-quote">
+        <div style="display:flex;flex-direction:column;gap:2rem;">
+          <div>
+            <div style="font-size:10px;letter-spacing:0.2em;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:0.6rem;">Board-certified</div>
+            <div style="font-family:var(--serif);font-size:22px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.3;">Dermatologist &amp; Mohs surgeon</div>
+          </div>
+          <div style="height:0.5px;background:rgba(255,255,255,0.1);"></div>
+          <div>
+            <div style="font-size:10px;letter-spacing:0.2em;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:0.6rem;">Training</div>
+            <div style="font-family:var(--serif);font-size:22px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.3;">Harvard · University of Iowa · Mount Sinai</div>
+          </div>
+          <div style="height:0.5px;background:rgba(255,255,255,0.1);"></div>
+          <div>
+            <div style="font-size:10px;letter-spacing:0.2em;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:0.6rem;">Available in</div>
+            <div style="font-family:var(--serif);font-size:22px;font-weight:300;color:rgba(255,255,255,0.8);line-height:1.3;">New York, California, and 7+ more states</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="#" class="footer-logo" aria-label="SkinCare.MD — back to top">SKINCARE.MD</a>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener">Book a consult</a></li>
+        <li><a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" target="_blank" rel="noopener">Skincare products</a></li>
+        <li><a href="https://www.mohs.surgery" target="_blank" rel="noopener">Mohs surgery</a></li>
+        <li><a href="http://skincare.md/blog" target="_blank" rel="noopener">Press</a></li>
+        <li><a href="https://scholar.google.com/citations?user=V5cHTuYAAAAJ" target="_blank" rel="noopener">Publications</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">© 2026 Dennis A. Porto MD PLLC &nbsp;·&nbsp; New York, NY</p>
+  </div>
+</footer>
+
+<!-- ACCESSIBILITY STATEMENT -->
+<section id="accessibility" style="background:var(--cream-dark); padding:4rem 0; border-top:0.5px solid var(--border);" aria-labelledby="a11y-heading">
+  <div class="container" style="max-width:680px;">
+    <span class="section-eyebrow">Accessibility</span>
+    <h2 style="font-family:var(--serif);font-size:28px;font-weight:300;color:var(--ink);margin-bottom:1.25rem;" id="a11y-heading">Accessibility statement</h2>
+    <p style="font-size:14px;font-weight:300;color:var(--ink-mid);line-height:1.85;margin-bottom:1rem;">SkinCare.MD is committed to ensuring digital accessibility for people with disabilities. We actively work to improve the user experience for everyone and apply relevant accessibility standards.</p>
+    <p style="font-size:14px;font-weight:300;color:var(--ink-mid);line-height:1.85;margin-bottom:1rem;">This site aims to conform to the <strong style="font-weight:500;color:var(--ink);">Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong>. Features include keyboard navigation support, screen reader compatibility, skip navigation, sufficient color contrast, and respect for reduced-motion preferences.</p>
+    <p style="font-size:14px;font-weight:300;color:var(--ink-mid);line-height:1.85;">If you experience any accessibility barriers on this site, please <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;">contact us through the patient portal</a> and we will make every effort to assist you.</p>
+  </div>
+</section>
+
+<script>
+function toggleMobileNav(btn) {
+  var nav = document.getElementById('mobile-nav');
+  var open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+}
+function closeMobileNav() {
+  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-toggle');
+  nav.classList.remove('open');
+  if (btn) { btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-label','Open navigation menu'); }
+}
+window.addEventListener('resize', function() { if (window.innerWidth > 860) closeMobileNav(); });
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-toggle');
+  if (nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) closeMobileNav();
+});
+document.getElementById('mobile-nav').addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeMobileNav(); document.querySelector('.nav-toggle').focus(); }
+});
+</script>
+</body>
+</html>
