@@ -9,6 +9,52 @@
 <meta property="og:description" content="Harvard-educated, double board-certified dermatologist. Virtual consults available in 9+ states.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.skincare.md">
+<meta property="og:site_name" content="SkinCare.MD">
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SkinCare.MD | Dr. Porto — Virtual Dermatologist">
+<meta name="twitter:description" content="Harvard-educated, double board-certified dermatologist. Virtual consults available in New York and 8+ other states.">
+
+<!-- SEO -->
+<meta name="robots" content="index, follow">
+<meta name="author" content="Dennis A. Porto, MD">
+<meta name="keywords" content="dermatologist, virtual dermatology, teledermatology, skin care, Mohs surgery, board-certified dermatologist, online dermatologist, New York dermatologist, acne, rosacea, eczema, skin cancer, Dr Porto">
+<link rel="canonical" href="https://www.skincare.md">
+
+<!-- Structured data (Google rich results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dennis A. Porto, MD",
+  "alternateName": "Dr. Porto",
+  "description": "Harvard-educated, double board-certified dermatologist and Mohs surgeon offering virtual dermatology consults in New York and 8+ other states.",
+  "url": "https://www.skincare.md",
+  "telephone": "",
+  "medicalSpecialty": "Dermatology",
+  "hasCredential": ["MD", "MPH", "FAAD", "Board-certified Mohs Surgeon"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Harvard University" },
+    { "@type": "CollegeOrUniversity", "name": "University of Iowa" }
+  ],
+  "memberOf": { "@type": "Organization", "name": "American Academy of Dermatology" },
+  "worksFor": { "@type": "Organization", "name": "Mount Sinai" },
+  "areaServed": ["New York", "Massachusetts", "California", "Virginia", "Maryland", "New Jersey", "New Hampshire", "Hawaii", "Pennsylvania"],
+  "availableService": {
+    "@type": "MedicalTherapy",
+    "name": "Virtual Dermatology Consultation"
+  },
+  "sameAs": [
+    "https://scholar.google.com/citations?user=V5cHTuYAAAAJ"
+  ]
+}
+</script>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231A1A18'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='400' fill='%23A07840'>Rx</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231A1A18'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='400' fill='%23A07840'>Rx</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231A1A18'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='28' font-weight='400' fill='%23A07840'>Rx</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -156,10 +202,8 @@ p { font-weight: 300; color: var(--ink-mid); }
   .hero-aside { border-left: none; border-top: 0.5px solid var(--border); padding-left: 0; padding-top: 2.5rem; flex-direction: row; flex-wrap: wrap; gap: 2rem; }
   .aside-divider { display: none; }
   .services-grid { grid-template-columns: 1fr; }
-  .about-inner { grid-template-columns: 1fr; gap: 3.5rem; }
-  .stat-block { flex-direction: row; }
-  .stat-row-item { border-bottom: none; border-right: 0.5px solid var(--border); flex: 1; }
-  .stat-row-item:last-child { border-right: none; }
+  .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .about-inner img { max-height: 380px; width: 100%; object-fit: cover; object-position: center top; }
   .consult-inner { grid-template-columns: 1fr; gap: 3.5rem; }
   .consult-right { border-left: none; border-top: 0.5px solid rgba(255,255,255,0.1); padding-left: 0; padding-top: 2.5rem; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
@@ -287,27 +331,32 @@ p { font-weight: 300; color: var(--ink-mid); }
       <div class="section">
         <div class="about-inner">
           <div class="about-left">
-            <span class="section-eyebrow">The physician</span>
-            <div class="stat-block" role="list" aria-label="Practice statistics">
-              <div class="stat-row-item" role="listitem">
-                <div class="stat-num">1,000+</div>
-                <div class="stat-label">Skin cancer surgeries</div>
-              </div>
-              <div class="stat-row-item" role="listitem">
-                <div class="stat-num">Dozens</div>
-                <div class="stat-label">Publications</div>
-              </div>
-              <div class="stat-row-item" role="listitem">
-                <div class="stat-num">9+</div>
-                <div class="stat-label">States licensed</div>
-              </div>
-            </div>
+            <img
+              src="https://drporto-bit.github.io/website/Dennis.webp"
+              alt="Dr. Porto, MD — board-certified dermatologist"
+              style="width:100%; display:block; border-radius:4px; object-fit:cover; object-position:center top; max-height:520px;"
+            >
           </div>
           <div class="about-right">
+            <span class="section-eyebrow">The physician</span>
             <h2 class="section-heading" id="about-heading">Trained at the top,<br>practicing where<br>you need him</h2>
             <p>Dr. Porto (Dennis A. Porto) graduated at the top of his class from the University of Iowa College of Medicine, earning membership in the <a href="https://www.alphaomegaalpha.org/" target="_blank" rel="noopener">Alpha Omega Alpha honor society</a>. He completed a skin cancer research fellowship and later a Master of Public Health at Harvard, where he was awarded the Lewis Hackett Scholarship.</p>
             <p>After completing internship and a three-year dermatology residency, Dr. Porto pursued advanced subspecialty training in <a href="https://www.mohs.surgery" target="_blank" rel="noopener">Mohs micrographic surgery</a> — the most precise technique for skin cancer removal — and is double board-certified in both dermatology and Mohs surgery.</p>
             <p>He is co-author and editor of the definitive textbook on <a href="https://www.amazon.com/Botulinum-Toxins-Cosmetic-Clinical-Applications/dp/1444338250/" target="_blank" rel="noopener">Botox and cosmetic injectables</a>, author of dozens of peer-reviewed articles, and a recipient of the Golden Scalpel from the American Society for Dermatologic Surgery. He holds a faculty appointment at Mount Sinai, where he teaches skin cancer surgery.</p>
+            <div style="display:flex; gap:2rem; margin-top:2rem; padding-top:2rem; border-top:0.5px solid var(--border); flex-wrap:wrap;">
+              <div>
+                <div style="font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);line-height:1;">1,000+</div>
+                <div style="font-size:11px;letter-spacing:0.12em;color:var(--ink-light);text-transform:uppercase;">Skin cancer surgeries</div>
+              </div>
+              <div>
+                <div style="font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);line-height:1;">Dozens</div>
+                <div style="font-size:11px;letter-spacing:0.12em;color:var(--ink-light);text-transform:uppercase;">Publications</div>
+              </div>
+              <div>
+                <div style="font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);line-height:1;">9+</div>
+                <div style="font-size:11px;letter-spacing:0.12em;color:var(--ink-light);text-transform:uppercase;">States licensed</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
