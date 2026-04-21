@@ -435,6 +435,157 @@ p { font-weight: 300; color: var(--ink-mid); }
   </div>
 </div>
 
+<!-- ACCESSIBILITY WIDGET -->
+<div id="a11y-widget" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:1000;">
+  <button
+    id="a11y-toggle"
+    aria-label="Open accessibility options"
+    aria-expanded="false"
+    aria-controls="a11y-panel"
+    onclick="toggleA11yPanel()"
+    style="width:48px;height:48px;border-radius:50%;background:var(--ink);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.25);"
+  >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="4.5" r="1.5" fill="#A07840"/>
+      <path d="M12 7.5C9 7.5 6.5 8.5 6.5 8.5L7.5 11.5C7.5 11.5 9.5 10.5 12 10.5C14.5 10.5 16.5 11.5 16.5 11.5L17.5 8.5C17.5 8.5 15 7.5 12 7.5Z" fill="white"/>
+      <path d="M9 11L7.5 19.5H9.5L11 14L12 15V19.5H14V14.5L13 12.5" fill="white"/>
+      <path d="M15 11L16.5 19.5H14.5L13 14" fill="white"/>
+    </svg>
+  </button>
+
+  <div
+    id="a11y-panel"
+    role="dialog"
+    aria-label="Accessibility options"
+    aria-modal="false"
+    hidden
+    style="position:absolute;bottom:60px;right:0;width:260px;background:var(--white);border:0.5px solid var(--border-mid);border-radius:12px;padding:1.25rem;box-shadow:0 4px 24px rgba(0,0,0,0.12);"
+  >
+    <div style="font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);margin-bottom:1rem;">Accessibility</div>
+
+    <!-- Text size -->
+    <div style="margin-bottom:1rem;">
+      <div style="font-size:12px;color:var(--ink-mid);margin-bottom:0.5rem;">Text size</div>
+      <div style="display:flex;gap:8px;">
+        <button onclick="adjustFont(-1)" aria-label="Decrease text size" style="flex:1;padding:8px;border:0.5px solid var(--border-mid);border-radius:6px;background:none;cursor:pointer;font-size:13px;color:var(--ink);">A−</button>
+        <button onclick="adjustFont(0)" aria-label="Reset text size" style="flex:1;padding:8px;border:0.5px solid var(--border-mid);border-radius:6px;background:none;cursor:pointer;font-size:13px;color:var(--ink);">A</button>
+        <button onclick="adjustFont(1)" aria-label="Increase text size" style="flex:1;padding:8px;border:0.5px solid var(--border-mid);border-radius:6px;background:none;cursor:pointer;font-size:15px;color:var(--ink);">A+</button>
+      </div>
+    </div>
+
+    <!-- High contrast -->
+    <div style="margin-bottom:1rem;">
+      <div style="font-size:12px;color:var(--ink-mid);margin-bottom:0.5rem;">High contrast</div>
+      <button
+        id="contrast-btn"
+        onclick="toggleContrast()"
+        aria-pressed="false"
+        style="width:100%;padding:8px;border:0.5px solid var(--border-mid);border-radius:6px;background:none;cursor:pointer;font-size:12px;color:var(--ink);text-align:left;"
+      >Off</button>
+    </div>
+
+    <!-- Reduce motion -->
+    <div style="margin-bottom:1rem;">
+      <div style="font-size:12px;color:var(--ink-mid);margin-bottom:0.5rem;">Reduce motion</div>
+      <button
+        id="motion-btn"
+        onclick="toggleMotion()"
+        aria-pressed="false"
+        style="width:100%;padding:8px;border:0.5px solid var(--border-mid);border-radius:6px;background:none;cursor:pointer;font-size:12px;color:var(--ink);text-align:left;"
+      >Off</button>
+    </div>
+
+    <!-- Dyslexia font -->
+    <div style="margin-bottom:1rem;">
+      <div style="font-size:12px;color:var(--ink-mid);margin-bottom:0.5rem;">Dyslexia-friendly font</div>
+      <button
+        id="dyslexia-btn"
+        onclick="toggleDyslexia()"
+        aria-pressed="false"
+        style="width:100%;padding:8px;border:0.5px solid var(--border-mid);border-radius:6px;background:none;cursor:pointer;font-size:12px;color:var(--ink);text-align:left;"
+      >Off</button>
+    </div>
+
+    <!-- Reset all -->
+    <button onclick="resetAll()" style="width:100%;padding:8px;border:0.5px solid var(--border-mid);border-radius:6px;background:var(--cream);cursor:pointer;font-size:11px;letter-spacing:0.1em;color:var(--ink-light);">Reset all</button>
+  </div>
+</div>
+
+<style>
+#a11y-panel.high-contrast-active { background: #000; border-color: #fff; }
+body.high-contrast { background: #000 !important; color: #fff !important; }
+body.high-contrast p, body.high-contrast li, body.high-contrast .service-desc, body.high-contrast .consult-desc, body.high-contrast .hero-desc { color: #fff !important; }
+body.high-contrast .site-nav { background: #000 !important; border-color: #fff !important; }
+body.high-contrast .about-section { background: #111 !important; }
+body.high-contrast .service-card { background: #111 !important; }
+body.high-contrast .service-card:hover { background: #222 !important; }
+body.high-contrast a { color: #FFD700 !important; }
+body.high-contrast .nav-logo, body.high-contrast .nav-links a, body.high-contrast .section-heading, body.high-contrast .hero-name, body.high-contrast .service-title, body.high-contrast .aside-num, body.high-contrast .stat-num { color: #fff !important; }
+body.reduce-motion *, body.reduce-motion *::before, body.reduce-motion *::after { transition: none !important; animation: none !important; }
+body.dyslexia-font, body.dyslexia-font p, body.dyslexia-font h1, body.dyslexia-font h2, body.dyslexia-font h3, body.dyslexia-font a, body.dyslexia-font button, body.dyslexia-font li { font-family: Arial, Helvetica, sans-serif !important; letter-spacing: 0.05em !important; line-height: 1.9 !important; }
+</style>
+
+<script>
+function toggleA11yPanel() {
+  var panel = document.getElementById('a11y-panel');
+  var btn = document.getElementById('a11y-toggle');
+  var open = panel.hasAttribute('hidden');
+  if (open) { panel.removeAttribute('hidden'); btn.setAttribute('aria-expanded','true'); }
+  else { panel.setAttribute('hidden',''); btn.setAttribute('aria-expanded','false'); }
+}
+
+var fontSize = 0;
+function adjustFont(dir) {
+  if (dir === 0) { fontSize = 0; document.documentElement.style.fontSize = '16px'; return; }
+  fontSize = Math.max(-2, Math.min(4, fontSize + dir));
+  document.documentElement.style.fontSize = (16 + fontSize * 2) + 'px';
+}
+
+function toggleContrast() {
+  var on = document.body.classList.toggle('high-contrast');
+  var btn = document.getElementById('contrast-btn');
+  btn.textContent = on ? 'On' : 'Off';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.style.background = on ? 'var(--ink)' : 'none';
+  btn.style.color = on ? 'var(--white)' : 'var(--ink)';
+}
+
+function toggleMotion() {
+  var on = document.body.classList.toggle('reduce-motion');
+  var btn = document.getElementById('motion-btn');
+  btn.textContent = on ? 'On' : 'Off';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.style.background = on ? 'var(--ink)' : 'none';
+  btn.style.color = on ? 'var(--white)' : 'var(--ink)';
+}
+
+function toggleDyslexia() {
+  var on = document.body.classList.toggle('dyslexia-font');
+  var btn = document.getElementById('dyslexia-btn');
+  btn.textContent = on ? 'On' : 'Off';
+  btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+  btn.style.background = on ? 'var(--ink)' : 'none';
+  btn.style.color = on ? 'var(--white)' : 'var(--ink)';
+}
+
+function resetAll() {
+  document.body.classList.remove('high-contrast','reduce-motion','dyslexia-font');
+  fontSize = 0; document.documentElement.style.fontSize = '16px';
+  ['contrast-btn','motion-btn','dyslexia-btn'].forEach(function(id) {
+    var b = document.getElementById(id);
+    b.textContent = 'Off'; b.setAttribute('aria-pressed','false');
+    b.style.background = 'none'; b.style.color = 'var(--ink)';
+  });
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var panel = document.getElementById('a11y-panel');
+    if (!panel.hasAttribute('hidden')) { panel.setAttribute('hidden',''); document.getElementById('a11y-toggle').setAttribute('aria-expanded','false'); document.getElementById('a11y-toggle').focus(); }
+  }
+});
+</script>
+
 <script>
 function toggleMobileNav(btn) {
   var nav = document.getElementById('mobile-nav');
