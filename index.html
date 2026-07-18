@@ -251,7 +251,7 @@ p { font-weight: 300; color: var(--ink-mid); }
 
 /* SERVICES */
 .services-section { border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 0.5px solid var(--border); }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-left: 0.5px solid var(--border); }
 .service-card { border-right: 0.5px solid var(--border); padding: 3rem 2.5rem; display: flex; flex-direction: column; transition: background 0.25s; }
 .service-card:hover { background: var(--white); }
 .service-n { font-size: 11px; letter-spacing: 0.16em; color: var(--gold); margin-bottom: 2rem; }
@@ -374,7 +374,7 @@ p { font-weight: 300; color: var(--ink-mid); }
         <p class="hero-desc">Double board-certified dermatologist offering expert virtual skin care across 10+ states. Diagnosis, prescriptions, and follow-up — all from your phone.</p>
         <div class="btn-row">
           <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-primary" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book a virtual consult</a>
-          <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-secondary" target="_blank" rel="noopener" aria-label="Chat with Dr. Porto (opens in new tab)">Chat now</a>
+          <a href="https://futureclinic.com/chat?clinic=drporto&amp;origin=profile_primary_cta&amp;intent=start" class="btn-secondary" target="_blank" rel="noopener" aria-label="Chat with Dr. Porto (opens in new tab)"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat now</a>
           <a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" class="btn-secondary" target="_blank" rel="noopener" aria-label="Shop physician skincare products (opens in new tab)">Skincare products</a>
         </div>
       </div>
@@ -421,18 +421,24 @@ p { font-weight: 300; color: var(--ink-mid); }
       <div class="services-grid" role="list">
         <article class="service-card" role="listitem">
           <div class="service-n" aria-hidden="true">01</div>
+          <h3 class="service-title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;vertical-align:-3px;color:var(--gold);" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat now</h3>
+          <p class="service-desc">Not ready to book a full consult? Send Dr. Porto a quick message to ask a question, describe a concern, or get pointed in the right direction — no commitment required.</p>
+          <a href="https://futureclinic.com/chat?clinic=drporto&amp;origin=profile_primary_cta&amp;intent=start" class="service-link" target="_blank" rel="noopener" aria-label="Start a chat with Dr. Porto (opens in new tab)">Start chat</a>
+        </article>
+        <article class="service-card" role="listitem">
+          <div class="service-n" aria-hidden="true">02</div>
           <h3 class="service-title">Virtual consult</h3>
           <p class="service-desc">Message Dr. Porto any time for a diagnosis, prescription, product recommendation, or to track your treatment progress — no waiting room, no commute.</p>
           <a href="https://app.futureclinic.com/clinics/drporto/profile" class="service-link" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book now</a>
         </article>
         <article class="service-card" role="listitem">
-          <div class="service-n" aria-hidden="true">02</div>
+          <div class="service-n" aria-hidden="true">03</div>
           <h3 class="service-title">Skin conditions</h3>
           <p class="service-desc">Acne, rosacea, eczema, psoriasis, hair loss, skin cancer screening, and more. Get a double board-certified diagnosis and treatment plan without leaving home.</p>
           <a href="https://app.futureclinic.com/clinics/drporto/profile" class="service-link" target="_blank" rel="noopener" aria-label="Get started with a virtual consultation (opens in new tab)">Get started</a>
         </article>
         <article class="service-card" role="listitem">
-          <div class="service-n" aria-hidden="true">03</div>
+          <div class="service-n" aria-hidden="true">04</div>
           <h3 class="service-title">Physician skincare</h3>
           <p class="service-desc">Curated, physician-formulated products hand-selected by Dr. Porto to complement your treatment plan and support lasting skin health.</p>
           <a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" class="service-link" target="_blank" rel="noopener" aria-label="Shop physician skincare products (opens in new tab)">Shop now</a>
