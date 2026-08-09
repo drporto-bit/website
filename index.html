@@ -165,9 +165,11 @@
 </script>
 
 <!-- Favicon set -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%231A1A18'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='400' fill='%23C4A070'>Rx</text></svg>">
-<link rel="alternate icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%231A1A18'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='400' fill='%23C4A070'>Rx</text></svg>">
-<link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='28' fill='%231A1A18'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='86' font-weight='400' fill='%23C4A070'>Rx</text></svg>">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#1A1A18">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -311,7 +313,7 @@ p { font-weight: 300; color: var(--ink-mid); }
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
-  .nav-links, .nav-book { display: none; }
+  .nav-links, .nav-book, .nav-social { display: none; }
   .nav-toggle { display: flex; }
   .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
   .hero-aside { border-left: none; border-top: 0.5px solid var(--border); padding-left: 0; padding-top: 2.5rem; flex-direction: row; flex-wrap: wrap; gap: 2rem; }
@@ -350,6 +352,14 @@ p { font-weight: 300; color: var(--ink-mid); }
         <li><a href="https://press.skincare.md" target="_blank" rel="noopener" aria-label="Press releases (opens in new tab)">Press releases</a></li>
       </ul>
       <a href="https://app.futureclinic.com/clinics/drporto/profile" class="nav-book" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book now</a>
+      <div class="nav-social" style="display:flex;gap:0.85rem;align-items:center;">
+        <a href="https://www.youtube.com/@DoctorPorto" target="_blank" rel="noopener" aria-label="Dr. Porto on YouTube (opens in new tab)" style="color:var(--ink-light);display:flex;transition:color 0.2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--ink-light)'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/skinsurgerymd/" target="_blank" rel="noopener" aria-label="Dr. Porto on Instagram (opens in new tab)" style="color:var(--ink-light);display:flex;transition:color 0.2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--ink-light)'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
       <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav" onclick="toggleMobileNav(this)">
         <span></span><span></span><span></span>
       </button>
@@ -360,6 +370,8 @@ p { font-weight: 300; color: var(--ink-mid); }
     <a href="#services" onclick="closeMobileNav()">Services</a>
     <a href="#consult" onclick="closeMobileNav()">Virtual consult</a>
     <a href="https://press.skincare.md" target="_blank" rel="noopener" onclick="closeMobileNav()">Press releases</a>
+    <a href="https://www.youtube.com/@DoctorPorto" target="_blank" rel="noopener" onclick="closeMobileNav()">YouTube</a>
+    <a href="https://www.instagram.com/skinsurgerymd/" target="_blank" rel="noopener" onclick="closeMobileNav()">Instagram</a>
     <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener" onclick="closeMobileNav()">Book now →</a>
   </nav>
 </header>
@@ -467,7 +479,7 @@ p { font-weight: 300; color: var(--ink-mid); }
             <p>Dr. Porto (Dennis A. Porto) graduated at the top of his class from the University of Iowa College of Medicine, earning membership in the <a href="https://www.alphaomegaalpha.org/" target="_blank" rel="noopener">Alpha Omega Alpha honor society</a>. He completed a skin cancer research fellowship and later a Master of Public Health at Harvard, where he was awarded the Lewis Hackett Scholarship.</p>
             <p>After completing internship and a three-year dermatology residency, Dr. Porto pursued advanced subspecialty training in <a href="https://www.mohs.surgery" target="_blank" rel="noopener">Mohs micrographic surgery</a> — the most precise technique for skin cancer removal — and is double board-certified in both dermatology and Mohs surgery.</p>
             <p>He is co-author and editor of the definitive textbook on <a href="https://www.amazon.com/Botulinum-Toxins-Cosmetic-Clinical-Applications/dp/1444338250/" target="_blank" rel="noopener">Botox and cosmetic injectables</a>, author of dozens of peer-reviewed articles, and a recipient of the Golden Scalpel from the American Society for Dermatologic Surgery. He holds a faculty appointment at Mount Sinai, where he teaches skin cancer surgery.</p>
-            <div style="display:flex; gap:2rem; margin-top:2rem; padding-top:2rem; border-top:0.5px solid var(--border); flex-wrap:wrap;">
+            <div style="display:flex; gap:2rem; margin-top:2rem; padding-top:2rem; border-top:0.5px solid var(--border); flex-wrap:wrap; align-items:center;">
               <div>
                 <div style="font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);line-height:1;">1,000+</div>
                 <div style="font-size:11px;letter-spacing:0.12em;color:var(--ink-light);text-transform:uppercase;">Skin cancer surgeries</div>
@@ -480,6 +492,17 @@ p { font-weight: 300; color: var(--ink-mid); }
                 <div style="font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ink);line-height:1;">10+</div>
                 <div style="font-size:11px;letter-spacing:0.12em;color:var(--ink-light);text-transform:uppercase;">States licensed</div>
               </div>
+            </div>
+            <div style="margin-top:2rem;padding-top:1.5rem;border-top:0.5px solid var(--border);display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;">
+              <span style="font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-light);">Follow Dr. Porto</span>
+              <a href="https://www.youtube.com/@DoctorPorto" target="_blank" rel="noopener" aria-label="Dr. Porto on YouTube (opens in new tab)" style="display:inline-flex;align-items:center;gap:7px;font-size:12px;letter-spacing:0.04em;color:var(--ink-mid);text-decoration:none;padding:6px 14px;border:0.5px solid var(--border-mid);border-radius:100px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--border-mid)'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                YouTube
+              </a>
+              <a href="https://www.instagram.com/skinsurgerymd/" target="_blank" rel="noopener" aria-label="Dr. Porto on Instagram (opens in new tab)" style="display:inline-flex;align-items:center;gap:7px;font-size:12px;letter-spacing:0.04em;color:var(--ink-mid);text-decoration:none;padding:6px 14px;border:0.5px solid var(--border-mid);border-radius:100px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--border-mid)'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                Instagram
+              </a>
             </div>
           </div>
         </div>
