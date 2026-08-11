@@ -241,6 +241,7 @@ p { font-weight: 300; color: var(--ink-mid); }
 .btn-secondary { display: inline-flex; align-items: center; padding: 14px 28px; background: transparent; color: var(--ink); font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; border-radius: 100px; border: 0.5px solid var(--border-mid); text-decoration: none; transition: border-color 0.2s, transform 0.15s; }
 .btn-secondary:hover { border-color: var(--ink); transform: translateY(-1px); }
 .hero-aside { border-left: 0.5px solid var(--border); padding-left: 4rem; display: flex; flex-direction: column; gap: 2.5rem; }
+.hero-photo { width: 100%; display: block; border-radius: 4px; object-fit: cover; object-position: center top; max-height: 460px; }
 .aside-num { font-family: var(--serif); font-size: 48px; font-weight: 300; color: var(--ink); line-height: 1; margin-bottom: 0.25rem; }
 .aside-label { font-size: 11px; letter-spacing: 0.14em; color: var(--ink-light); text-transform: uppercase; }
 .aside-divider { width: 100%; height: 0.5px; background: var(--border); border: none; }
@@ -317,6 +318,7 @@ p { font-weight: 300; color: var(--ink-mid); }
   .nav-toggle { display: flex; }
   .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
   .hero-aside { border-left: none; border-top: 0.5px solid var(--border); padding-left: 0; padding-top: 2.5rem; flex-direction: row; flex-wrap: wrap; gap: 2rem; }
+  .hero-photo { max-height: 340px; object-position: center 20%; margin-bottom: 0.5rem; }
   .aside-divider { display: none; }
   .services-grid { grid-template-columns: 1fr; }
   .about-inner { grid-template-columns: 1fr; gap: 2rem; }
@@ -393,6 +395,14 @@ p { font-weight: 300; color: var(--ink-mid); }
         </div>
       </div>
       <div class="hero-aside" aria-label="Practice highlights">
+        <img
+          class="hero-photo"
+          src="https://drporto-bit.github.io/website/porto-whitecoat.png"
+          alt="Dr. Dennis Porto, MD — double board-certified dermatologist and Mohs surgeon, pictured in his office with his Harvard MPH and American Board of Dermatology Mohs Micrographic Surgery certificates"
+          loading="eager"
+          width="1072"
+          height="1440"
+        >
         <div class="aside-block">
           <div class="aside-num">100,000+</div>
           <div class="aside-label">Patients treated</div>
