@@ -8,6 +8,26 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.skincare.md/accessibility.html">
 
+<!-- Open Graph -->
+<meta property="og:title" content="Accessibility Statement | SkinCare.MD">
+<meta property="og:description" content="Accessibility statement for skincare.md, the virtual dermatology practice of Dr. Dennis Porto, MD.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.skincare.md/accessibility.html">
+<meta property="og:site_name" content="SkinCare.MD">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://www.skincare.md/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr. Dennis Porto, MD — double board-certified dermatologist offering virtual dermatology consults">
+<meta property="og:image:type" content="image/jpeg">
+
+<!-- Twitter / X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Accessibility Statement | SkinCare.MD">
+<meta name="twitter:description" content="How skincare.md works with assistive technology, and how to report a barrier.">
+<meta name="twitter:image" content="https://www.skincare.md/og-image.jpg">
+<meta name="twitter:image:alt" content="Dr. Dennis Porto, MD — double board-certified dermatologist offering virtual dermatology consults">
+
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,6 +36,7 @@
 <meta name="theme-color" content="#1A1A18">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,13 +45,13 @@
   --white:      #FFFFFF;
   --ink:        #1A1A18;
   --ink-mid:    #47453F;
-  --ink-light:  #87847C;
-  --gold:       #A07840;
+  --ink-light:  #6E6B64;
+  --gold:       #8A6634;
   --border:     rgba(26,26,24,0.10);
   --border-mid: rgba(26,26,24,0.18);
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --focus-ring: 0 0 0 3px rgba(160,120,64,0.5);
+  --focus-ring: 0 0 0 3px rgba(138,102,52,0.55);
   --nav-h: 68px;
 }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -85,7 +106,8 @@ li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 
 .field textarea { min-height: 110px; resize: vertical; line-height: 1.6; }
 .field input:hover, .field textarea:hover { border-color: var(--ink-light); }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: var(--focus-ring); }
-.field input:invalid:not(:placeholder-shown), .field textarea:invalid:not(:placeholder-shown) { border-color: #A33A2A; }
+.field input:user-invalid, .field textarea:user-invalid { border-color: #A33A2A; }
+.field input:user-invalid + .help, .field textarea:user-invalid + .help { color: #8C2E20; }
 .help { font-size: 12px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; margin: 0.4rem 0 0; }
 .submit-btn {
   font-family: var(--sans);
@@ -107,7 +129,7 @@ li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 
 .site-footer { background: var(--ink); padding: 3rem 0; }
 .footer-inner { max-width: 780px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 .footer-logo { font-size: 12px; font-weight: 500; letter-spacing: 0.22em; color: var(--white); text-decoration: none; }
-.footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.5); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
@@ -140,24 +162,24 @@ li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 
 
   <h2>Conformance</h2>
   <p>This website is built to align with the <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener">Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</a> published by the World Wide Web Consortium. WCAG Level AA is the standard referenced under Section 508 of the Rehabilitation Act and by the U.S. Department of Justice in its rulemaking under the Americans with Disabilities Act.</p>
-  <p>We describe this site as <em>partially conformant</em> with WCAG 2.1 Level AA, meaning most but not necessarily all of the success criteria are met. Where the default presentation does not meet a contrast threshold, the accessibility controls described below provide a conforming alternate version.</p>
+  <p>We describe this site as <em>partially conformant</em> with WCAG 2.1 Level AA, meaning most but not necessarily all of the success criteria are met. The default presentation is designed to meet the Level AA contrast thresholds on its own; the accessibility controls described below go further for visitors who want stronger differentiation.</p>
 
   <h2>Accessibility features on this site</h2>
   <ul>
-    <li><strong>Accessibility controls</strong>A floating control panel is available on every screen, offering adjustable text size, a high-contrast mode, a reduced-motion setting, and a dyslexia-friendly typeface. Settings can be reset at any time.</li>
+    <li><strong>Accessibility controls</strong>A floating control panel is available on every page of this site, offering adjustable text size from 80% to 150%, a high-contrast mode, a reduced-motion setting, and a dyslexia-friendly typeface. Your choices are remembered as you move between pages and can be reset at any time.</li>
     <li><strong>Keyboard navigation</strong>Every interactive element can be reached and operated with a keyboard alone, and a visible focus indicator shows the current position.</li>
     <li><strong>Skip-to-content link</strong>A skip link is the first focusable item on the page, letting keyboard and screen-reader users bypass the navigation.</li>
     <li><strong>Semantic structure</strong>The page uses HTML5 landmarks — header, nav, main, footer — along with ARIA labels and a logical heading order, so assistive technologies can announce regions clearly.</li>
     <li><strong>High-contrast mode</strong>When enabled, text and interactive elements are rendered at contrast ratios well above the 4.5:1 minimum required for Level AA.</li>
     <li><strong>Resizable text</strong>Text can be enlarged through the accessibility panel or by using the browser's own zoom, and the layout adapts responsively.</li>
-    <li><strong>Reduced motion</strong>The site honors the operating system's "reduce motion" preference automatically, and motion can also be disabled manually. Animations are limited to subtle transitions and nothing that flashes or could trigger vestibular symptoms.</li>
+    <li><strong>Reduced motion</strong>The site honors the operating system's "reduce motion" preference automatically, and motion can also be disabled manually from the accessibility panel. Animations are limited to subtle transitions and nothing that flashes or could trigger vestibular symptoms.</li>
     <li><strong>Descriptive alternative text</strong>Meaningful images carry descriptive alt text; decorative elements are hidden from assistive technologies.</li>
     <li><strong>Forms</strong>The accessibility feedback form has visible labels, programmatic label associations, descriptive help text, and touch targets of at least 44×44 pixels.</li>
     <li><strong>Link clarity</strong>Links that open in a new tab are labeled as such for screen-reader users.</li>
   </ul>
 
   <h2>Color contrast</h2>
-  <p>Body text, headings, and interactive controls on this site meet or exceed the 4.5:1 contrast ratio required for WCAG Level AA at normal text sizes. A high-contrast mode is additionally available in the accessibility panel for users who prefer stronger differentiation.</p>
+  <p>Body text, headings, links, and interactive controls on this site are checked against the 4.5:1 contrast ratio required for WCAG Level AA at normal text sizes; the lowest ratio in the current palette is 4.75:1. A high-contrast mode is additionally available in the accessibility panel for visitors who prefer stronger differentiation.</p>
 
   <h2>Known limitations</h2>
   <p>We want to be straightforward about where barriers may remain:</p>
@@ -209,7 +231,7 @@ li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 
   <h2>Privacy</h2>
   <p>The accessibility feedback form above is the only form on this site. It is processed by Formspree, a third-party form service, and the information you submit is used solely to respond to your report. Please do not include health information in it.</p>
   <p>No other personal information is collected by this website. Scheduling, messaging, and payment take place on separate third-party platforms, each governed by its own privacy policy and, where applicable, its own HIPAA obligations.</p>
-  <p>This site uses Google Analytics to measure general traffic patterns. No health information is transmitted to or stored by this website.</p>
+  <p>This site loads a Google Ads conversion tag, which measures whether a visit followed an advertisement. It is not Google Analytics and it does not build a profile of your health. No health information is transmitted to or stored by this website. Our <a href="/privacy.html">privacy policy</a> describes this in full.</p>
 
   <p class="meta">Last reviewed: August 2026</p>
 

@@ -20,12 +20,19 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.skincare.md">
 <meta property="og:site_name" content="SkinCare.MD">
+<meta property="og:image" content="https://www.skincare.md/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr. Dennis Porto, MD — double board-certified dermatologist offering virtual dermatology consults">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter / X card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dr. Porto, MD | Virtual Dermatologist">
 <meta name="twitter:description" content="Harvard-educated, double board-certified dermatologist. Virtual dermatology consults for acne, rosacea, eczema, hair loss, and more.">
+<meta name="twitter:image" content="https://www.skincare.md/og-image.jpg">
+<meta name="twitter:image:alt" content="Dr. Dennis Porto, MD — double board-certified dermatologist offering virtual dermatology consults">
 
 <!-- SEO -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -45,7 +52,7 @@
   "honorificSuffix": "MD, MPH, FAAD",
   "description": "Harvard-educated, double board-certified dermatologist and Mohs surgeon offering virtual dermatology consultations across the country.",
   "url": "https://www.skincare.md",
-  "image": "https://drporto-bit.github.io/website/Dennis.webp",
+  "image": "https://www.skincare.md/og-image.jpg",
   "medicalSpecialty": ["Dermatology", "Mohs Micrographic Surgery"],
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "MD" },
@@ -69,6 +76,13 @@
     "url": "https://www.mountsinai.org"
   },
   "award": ["Golden Scalpel - American Society for Dermatologic Surgery", "Lewis Hackett Scholarship - Harvard"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "addressCountry": "US"
+  },
+  "availableLanguage": "English",
   "areaServed": [
     { "@type": "State", "name": "New York" },
     { "@type": "State", "name": "Massachusetts" },
@@ -171,7 +185,9 @@
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#1A1A18">
 
+<link rel="preload" as="image" href="/porto-whitecoat.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -303,6 +319,18 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
 .footer-links a:hover { color: rgba(255,255,255,0.95); }
 .footer-copy { font-size: 11px; color: rgba(255,255,255,0.5); width: 100%; }
 
+/* FAQ */
+.faq-section { background: var(--cream); border-top: 0.5px solid var(--border); }
+.faq-inner { max-width: 1060px; margin: 0 auto; padding: 6rem 2rem; }
+.faq-grid { max-width: 780px; }
+.faq-item { border-bottom: 0.5px solid var(--border); padding: 1.5rem 0; }
+.faq-item:first-of-type { border-top: 0.5px solid var(--border); }
+.faq-q { font-family: var(--sans); font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 0.6rem; line-height: 1.4; }
+.faq-a { font-size: 15px; font-weight: 300; color: var(--ink-mid); line-height: 1.8; margin: 0; }
+/* MEDICAL DISCLAIMER */
+.disclaimer-strip { background: var(--cream); border-top: 0.5px solid var(--border); }
+.disclaimer-inner { max-width: 1060px; margin: 0 auto; padding: 2.5rem 2rem; }
+.disclaimer-inner p { font-size: 12px; font-weight: 300; color: var(--ink-mid); line-height: 1.7; max-width: 780px; margin: 0; }
 /* ACCESSIBILITY STRIP */
 .a11y-section { background: var(--cream); padding: 2.5rem 0; border-top: 0.5px solid var(--border); }
 .a11y-inner { max-width: 1060px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: baseline; gap: 2rem; flex-wrap: wrap; }
@@ -399,11 +427,12 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
       <div class="hero-aside" aria-label="Practice highlights">
         <img
           class="hero-photo"
-          src="https://drporto-bit.github.io/website/porto-whitecoat.png"
+          src="/porto-whitecoat.webp"
           alt="Dr. Dennis Porto, MD — double board-certified dermatologist and Mohs surgeon, pictured in his office with his Harvard MPH and American Board of Dermatology Mohs Micrographic Surgery certificates"
           loading="eager"
-          width="1072"
-          height="1440"
+          width="1086"
+          height="1448"
+          fetchpriority="high"
         >
         <div class="aside-block">
           <div class="aside-num">100,000+</div>
@@ -480,7 +509,7 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
         <div class="about-inner">
           <div class="about-left">
             <img
-              src="https://drporto-bit.github.io/website/Dennis.webp"
+              src="/Dennis.webp"
               alt="Dr. Porto, MD — double board-certified dermatologist"
               style="width:100%; display:block; border-radius:4px; object-fit:cover; object-position:center top; max-height:520px;"
             >
@@ -592,6 +621,36 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section id="faq" class="faq-section" aria-labelledby="faq-heading">
+    <div class="faq-inner">
+      <span class="section-eyebrow">Common questions</span>
+      <h2 class="section-heading" id="faq-heading" style="margin-bottom:2.5rem;">Frequently asked</h2>
+      <div class="faq-grid">
+      <div class="faq-item">
+        <h3 class="faq-q">What is virtual dermatology?</h3>
+        <p class="faq-a">Virtual dermatology (also called teledermatology) lets you consult with a board-certified dermatologist from your phone or computer. You can send photos, describe your symptoms, receive a diagnosis, and get a prescription — all without an in-person visit.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">What conditions can Dr. Porto treat virtually?</h3>
+        <p class="faq-a">Dr. Porto treats acne, rosacea, eczema, psoriasis, hair loss, melasma, hyperpigmentation, seborrheic dermatitis, perioral dermatitis, keratosis pilaris, warts, cold sores, fungal infections, nail conditions, hives, contact dermatitis, skin tags, spot checks for moles, rashes, itching, and scars — all through virtual consultation.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Is Dr. Porto board-certified?</h3>
+        <p class="faq-a">Yes. Dr. Porto is double board-certified in both dermatology and Mohs micrographic surgery. He is Harvard-educated (MPH) and holds a faculty appointment at Mount Sinai.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Which states does Dr. Porto practice in?</h3>
+        <p class="faq-a">Dr. Porto is licensed to practice in New York, Massachusetts, California, Virginia, Maryland, New Jersey, New Hampshire, Hawaii, Pennsylvania, and Connecticut, with more states coming soon.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Can I get a prescription through a virtual dermatology consult?</h3>
+        <p class="faq-a">Yes. When medically appropriate, Dr. Porto can prescribe medications for skin conditions during a virtual consultation, and prescriptions are sent directly to your pharmacy.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer" role="contentinfo">
@@ -608,7 +667,9 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
         <li><a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" target="_blank" rel="noopener">Skincare products</a></li>
         <li><a href="https://www.mohs.surgery" target="_blank" rel="noopener">Mohs surgery</a></li>
         <li><a href="https://scholar.google.com/citations?user=V5cHTuYAAAAJ" target="_blank" rel="noopener">Publications</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="/accessibility.html">Accessibility</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
       </ul>
     </nav>
     <div style="display:flex;gap:1rem;align-items:center;">
@@ -622,6 +683,13 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
     <p class="footer-copy">© 2026 Dennis A. Porto MD PLLC &nbsp;·&nbsp; New York, NY</p>
   </div>
 </footer>
+
+<!-- MEDICAL DISCLAIMER -->
+<div class="disclaimer-strip" role="complementary" aria-label="Medical disclaimer">
+  <div class="disclaimer-inner">
+    <p>The content on this site is general health information, not medical advice, and viewing it does not create a physician–patient relationship. Treatment decisions depend on your individual history and examination. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.</p>
+  </div>
+</div>
 
 <!-- ACCESSIBILITY STRIP -->
 <div class="a11y-section" role="complementary" aria-labelledby="a11y-strip-heading">
