@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Statement | SkinCare.MD — Dr. Porto</title>
+<meta name="description" content="Accessibility statement for skincare.md, the virtual dermatology practice of Dr. Dennis Porto, MD.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.skincare.md/accessibility.html">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#1A1A18">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --cream:      #F7F4EF;
+  --white:      #FFFFFF;
+  --ink:        #1A1A18;
+  --ink-mid:    #47453F;
+  --ink-light:  #87847C;
+  --gold:       #A07840;
+  --border:     rgba(26,26,24,0.10);
+  --border-mid: rgba(26,26,24,0.18);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --focus-ring: 0 0 0 3px rgba(160,120,64,0.5);
+  --nav-h: 68px;
+}
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--sans); background: var(--cream); color: var(--ink); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+.skip-link { position: absolute; top: -999px; left: 1rem; background: var(--ink); color: var(--white); font-size: 13px; font-weight: 500; padding: 10px 18px; border-radius: 4px; z-index: 9999; text-decoration: none; }
+.skip-link:focus { top: 1rem; }
+:focus-visible { outline: none; box-shadow: var(--focus-ring); border-radius: 3px; }
+
+.site-nav { position: fixed; top: 0; left: 0; right: 0; height: var(--nav-h); background: rgba(247,244,239,0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 0.5px solid var(--border); z-index: 200; }
+.nav-inner { max-width: 780px; margin: 0 auto; padding: 0 2rem; height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.nav-logo { font-size: 12px; font-weight: 500; letter-spacing: 0.22em; color: var(--ink); text-decoration: none; }
+.nav-back { font-size: 12px; letter-spacing: 0.07em; color: var(--ink-mid); text-decoration: none; }
+.nav-back:hover { color: var(--ink); }
+
+main { max-width: 780px; margin: 0 auto; padding: calc(var(--nav-h) + 5rem) 2rem 6rem; }
+
+.page-eyebrow { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+h1 { font-family: var(--serif); font-size: clamp(34px, 5vw, 48px); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+h2 { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.2; margin: 3rem 0 1rem; }
+p { font-size: 15px; font-weight: 300; color: var(--ink-mid); line-height: 1.85; margin-bottom: 1.1rem; }
+a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+ul { margin: 0 0 1.5rem 0; padding: 0; list-style: none; }
+li { font-size: 15px; font-weight: 300; color: var(--ink-mid); line-height: 1.8; padding: 0.85rem 0 0.85rem 0; border-bottom: 0.5px solid var(--border); }
+li:first-child { border-top: 0.5px solid var(--border); }
+li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 0.15rem; }
+.lede { font-size: 17px; line-height: 1.8; color: var(--ink-mid); margin-bottom: 2rem; }
+.meta { font-size: 12px; color: var(--ink-light); margin-top: 3rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); }
+.contact-block { background: var(--white); border: 0.5px solid var(--border); border-radius: 6px; padding: 1.75rem 2rem; margin: 1.5rem 0; }
+.contact-block p { margin-bottom: 0.5rem; }
+.contact-block p:last-child { margin-bottom: 0; }
+
+.site-footer { background: var(--ink); padding: 3rem 0; }
+.footer-inner { max-width: 780px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-logo { font-size: 12px; font-weight: 500; letter-spacing: 0.22em; color: var(--white); text-decoration: none; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header role="banner">
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="SkinCare.MD — home">SKINCARE.MD</a>
+      <a href="/" class="nav-back">← Back to site</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+  <span class="page-eyebrow">Accessibility</span>
+  <h1>Accessibility statement</h1>
+
+  <p class="lede">SkinCare.MD is committed to making this website usable by everyone, including people who rely on assistive technologies. Access to health information should not depend on ability.</p>
+
+  <h2>Our commitment</h2>
+  <p>This site is the virtual dermatology practice of Dr. Dennis Porto, MD. We work to keep skincare.md usable across the widest practical range of devices, browsers, and assistive technologies, and we treat accessibility as an ongoing responsibility rather than a one-time task.</p>
+
+  <h2>Conformance</h2>
+  <p>This website is built to align with the <a href="https://www.w3.org/WAI/WCAG22/quickref/" target="_blank" rel="noopener">Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</a> published by the World Wide Web Consortium. WCAG Level AA is the standard referenced under Section 508 of the Rehabilitation Act and by the U.S. Department of Justice in its rulemaking under the Americans with Disabilities Act.</p>
+  <p>We describe this site as <em>partially conformant</em> with WCAG 2.1 Level AA, meaning most but not necessarily all of the success criteria are met. Where the default presentation does not meet a contrast threshold, the accessibility controls described below provide a conforming alternate version.</p>
+
+  <h2>Accessibility features on this site</h2>
+  <ul>
+    <li><strong>Accessibility controls</strong>A floating control panel is available on every screen, offering adjustable text size, a high-contrast mode, a reduced-motion setting, and a dyslexia-friendly typeface. Settings can be reset at any time.</li>
+    <li><strong>Keyboard navigation</strong>Every interactive element can be reached and operated with a keyboard alone, and a visible focus indicator shows the current position.</li>
+    <li><strong>Skip-to-content link</strong>A skip link is the first focusable item on the page, letting keyboard and screen-reader users bypass the navigation.</li>
+    <li><strong>Semantic structure</strong>The page uses HTML5 landmarks — header, nav, main, footer — along with ARIA labels and a logical heading order, so assistive technologies can announce regions clearly.</li>
+    <li><strong>High-contrast mode</strong>When enabled, text and interactive elements are rendered at contrast ratios well above the 4.5:1 minimum required for Level AA.</li>
+    <li><strong>Resizable text</strong>Text can be enlarged through the accessibility panel or by using the browser's own zoom, and the layout adapts responsively.</li>
+    <li><strong>Reduced motion</strong>The site honors the operating system's "reduce motion" preference automatically, and motion can also be disabled manually. Animations are limited to subtle transitions and nothing that flashes or could trigger vestibular symptoms.</li>
+    <li><strong>Descriptive alternative text</strong>Meaningful images carry descriptive alt text; decorative elements are hidden from assistive technologies.</li>
+    <li><strong>Link clarity</strong>Links that open in a new tab are labeled as such for screen-reader users.</li>
+  </ul>
+
+  <h2>Known limitations</h2>
+  <p>We want to be straightforward about where barriers may remain:</p>
+  <ul>
+    <li><strong>Default color contrast</strong>Some secondary text in the default presentation uses low-contrast tones for visual reasons and may fall below the 4.5:1 ratio. Enabling high-contrast mode in the accessibility panel resolves this.</li>
+    <li><strong>Third-party services</strong>Booking, messaging, and product ordering are handled by outside platforms — including our patient portal and skincare fulfillment partner — which are governed by their own accessibility practices. If you encounter a barrier on one of those services, contact us and we will help you complete the task another way.</li>
+    <li><strong>Horizontal scrolling</strong>On narrow screens, the credentials strip scrolls sideways without an explicit visual cue. The same information appears elsewhere on the page in a standard vertical layout.</li>
+  </ul>
+
+  <h2>How we test</h2>
+  <p>This site is reviewed using manual keyboard-only navigation, browser zoom testing, and automated accessibility auditing tools. Testing is not exhaustive, and we welcome reports of issues we may have missed.</p>
+
+  <h2>Feedback</h2>
+  <p>If you encounter an accessibility barrier on this site, or need information from it in a different format, please tell us. We aim to respond within five business days.</p>
+  <div class="contact-block">
+    <p><strong style="font-weight:500;color:var(--ink);">Contact:</strong> <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener">Send a message through the patient portal (opens in a new tab)</a></p>
+    <p style="font-size:13px;color:var(--ink-light);">Please include the page you were on, the browser or assistive technology you were using, and a short description of what went wrong.</p>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>This website does not collect personal information from visitors. It contains no forms, no account creation, and no patient data. Scheduling, messaging, and payment take place on separate third-party platforms, each governed by its own privacy policy and, where applicable, its own HIPAA obligations.</p>
+  <p>This site uses Google Analytics to measure general traffic patterns. No health information is transmitted to or stored by this website.</p>
+
+  <p class="meta">Last reviewed: August 2026</p>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="/" class="footer-logo" aria-label="SkinCare.MD — home">SKINCARE.MD</a>
+    <p class="footer-copy">© 2026 Dennis A. Porto MD PLLC</p>
+  </div>
+</footer>
+
+</body>
+</html>
