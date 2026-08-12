@@ -301,6 +301,9 @@ p { font-weight: 300; color: var(--ink-mid); }
 .btn-gold:hover { background: var(--gold-light); color: var(--ink); transform: translateY(-1px); }
 .states-block { border-top: 0.5px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem; }
 .states-label { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.55); text-transform: uppercase; margin-bottom: 1rem; display: block; }
+a.state-link { display:inline-block; color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,0.4); transition: background 0.2s, color 0.2s; }
+a.state-link:hover { background: rgba(255,255,255,0.95); color: var(--ink); text-decoration-color: transparent; }
+a.state-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,112,0.85); }
 .states-pills { display: flex; gap: 8px; flex-wrap: wrap; list-style: none; padding: 0; }
 .state-pill { font-size: 11px; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 100px; border: 0.5px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.72); }
 .consult-right { border-left: 1px solid rgba(255,255,255,0.12); padding-left: 3rem; display: flex; flex-direction: column; gap: 2rem; }
@@ -568,16 +571,16 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
         <div class="states-block">
           <span class="states-label">Licensed to practice in</span>
           <ul class="states-pills" role="list" aria-label="States where Dr. Porto is licensed">
-            <li class="state-pill" role="listitem">New York</li>
-            <li class="state-pill" role="listitem">Massachusetts</li>
-            <li class="state-pill" role="listitem">California</li>
-            <li class="state-pill" role="listitem">Virginia</li>
-            <li class="state-pill" role="listitem">Maryland</li>
-            <li class="state-pill" role="listitem">New Jersey</li>
-            <li class="state-pill" role="listitem">New Hampshire</li>
-            <li class="state-pill" role="listitem">Hawaii</li>
-            <li class="state-pill" role="listitem">Pennsylvania</li>
-            <li class="state-pill" role="listitem">Connecticut</li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-new-york.html">New York</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-massachusetts.html">Massachusetts</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-california.html">California</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-virginia.html">Virginia</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-maryland.html">Maryland</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-new-jersey.html">New Jersey</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-new-hampshire.html">New Hampshire</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-hawaii.html">Hawaii</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-pennsylvania.html">Pennsylvania</a></li>
+            <li role="listitem"><a class="state-pill state-link" href="/virtual-dermatologist-connecticut.html">Connecticut</a></li>
             <li class="state-pill" role="listitem">+ more soon</li>
           </ul>
         </div>
