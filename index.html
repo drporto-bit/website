@@ -296,6 +296,8 @@ p { font-weight: 300; color: var(--ink-mid); }
 .consult-section .section-heading { color: var(--white); }
 .consult-desc { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.72); line-height: 1.85; margin-bottom: 2rem; }
 .btn-gold { display: inline-flex; align-items: center; padding: 14px 28px; background: var(--gold); color: var(--white); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; border-radius: 100px; text-decoration: none; transition: background 0.2s, transform 0.15s; min-height: 44px; }
+.btn-outline-light { display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; background: transparent; color: var(--white); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; border-radius: 100px; border: 0.5px solid rgba(255,255,255,0.35); text-decoration: none; min-height: 44px; transition: border-color 0.2s; }
+.btn-outline-light:hover { border-color: var(--white); color: var(--white); }
 .btn-gold:hover { background: var(--gold-light); color: var(--ink); transform: translateY(-1px); }
 .states-block { border-top: 0.5px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem; }
 .states-label { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.55); text-transform: uppercase; margin-bottom: 1rem; display: block; }
@@ -378,11 +380,11 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
       <ul class="nav-links" role="list">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#conditions">Conditions</a></li>
+        <li><a href="/conditions.html">Conditions</a></li>
         <li><a href="#consult">Virtual consult</a></li>
         <li><a href="https://press.skincare.md" target="_blank" rel="noopener" aria-label="Press releases (opens in new tab)">Press releases</a></li>
       </ul>
-      <a href="https://app.futureclinic.com/clinics/drporto/profile" class="nav-book" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book now</a>
+      <a href="https://futureclinic.com/chat?clinic=drporto&amp;origin=profile_primary_cta&amp;intent=start" class="nav-book" target="_blank" rel="noopener" aria-label="Chat with Dr. Porto (opens in new tab)">Chat now</a>
       <div class="nav-social" style="display:flex;gap:0.85rem;align-items:center;">
         <a href="https://www.youtube.com/@DoctorPorto" target="_blank" rel="noopener" aria-label="Dr. Porto on YouTube (opens in new tab)" style="color:var(--ink-light);display:flex;transition:color 0.2s;" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--ink-light)'">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
@@ -399,12 +401,13 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="#about" onclick="closeMobileNav()">About</a>
     <a href="#services" onclick="closeMobileNav()">Services</a>
-    <a href="#conditions" onclick="closeMobileNav()">Conditions</a>
+    <a href="/conditions.html" onclick="closeMobileNav()">Conditions</a>
     <a href="#consult" onclick="closeMobileNav()">Virtual consult</a>
     <a href="https://press.skincare.md" target="_blank" rel="noopener" onclick="closeMobileNav()">Press releases</a>
     <a href="https://www.youtube.com/@DoctorPorto" target="_blank" rel="noopener" onclick="closeMobileNav()">YouTube</a>
     <a href="https://www.instagram.com/skinsurgerymd/" target="_blank" rel="noopener" onclick="closeMobileNav()">Instagram</a>
-    <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener" onclick="closeMobileNav()">Book now →</a>
+    <a href="https://futureclinic.com/chat?clinic=drporto&amp;origin=profile_primary_cta&amp;intent=start" target="_blank" rel="noopener" onclick="closeMobileNav()">Chat with Dr. Porto →</a>
+    <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener" onclick="closeMobileNav()">Book a consult</a>
   </nav>
 </header>
 
@@ -419,10 +422,10 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
         <p class="hero-sub">MPH · FAAD · Harvard Alum · Mount Sinai Faculty</p>
         <p class="hero-desc">Double board-certified dermatologist offering expert virtual skin care across 10+ states. Diagnosis, prescriptions, and follow-up — all from your phone.</p>
         <div class="btn-row">
-          <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-primary" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book a virtual consult</a>
-          <a href="https://futureclinic.com/chat?clinic=drporto&amp;origin=profile_primary_cta&amp;intent=start" class="btn-secondary" target="_blank" rel="noopener" aria-label="Chat with Dr. Porto (opens in new tab)"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat now</a>
-          <a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" class="btn-secondary" target="_blank" rel="noopener" aria-label="Shop physician skincare products (opens in new tab)">Skincare products</a>
+          <a href="https://futureclinic.com/chat?clinic=drporto&amp;origin=profile_primary_cta&amp;intent=start" class="btn-primary" target="_blank" rel="noopener" aria-label="Chat with Dr. Porto (opens in new tab)"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat with Dr. Porto</a>
+          <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-secondary" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book a consult</a>
         </div>
+        <p style="font-size:13px;font-weight:300;color:var(--ink-light);margin-top:1rem;">Start with a message — no appointment needed. Or <a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px;" aria-label="Shop physician skincare products (opens in new tab)">shop physician skincare</a>.</p>
       </div>
       <div class="hero-aside" aria-label="Practice highlights">
         <img
@@ -490,7 +493,7 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
           <div class="service-n" aria-hidden="true">03</div>
           <h3 class="service-title">Skin conditions</h3>
           <p class="service-desc">Acne, rosacea, eczema, psoriasis, hair loss, and more. Get a double board-certified diagnosis and treatment plan without leaving home.</p>
-          <a href="#conditions" class="service-link" aria-label="See conditions treated">See conditions</a>
+          <a href="/conditions.html" class="service-link" aria-label="See all conditions treated">See conditions</a>
         </article>
         <article class="service-card" role="listitem">
           <div class="service-n" aria-hidden="true">04</div>
@@ -558,7 +561,10 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
         <span class="section-eyebrow">Virtual dermatology</span>
         <h2 class="section-heading" id="consult-heading">Your personal dermatologist,<br>in your pocket</h2>
         <p class="consult-desc">Message Dr. Porto any time — for a diagnosis, a prescription, a skincare recommendation, or to follow your progress. Expert dermatology, no waiting room required.</p>
-        <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-gold" target="_blank" rel="noopener" aria-label="Start a virtual consult (opens in new tab)">Start a consult</a>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+          <a href="https://futureclinic.com/chat?clinic=drporto&amp;origin=profile_primary_cta&amp;intent=start" class="btn-gold" target="_blank" rel="noopener" aria-label="Chat with Dr. Porto (opens in new tab)"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat with Dr. Porto</a>
+          <a href="https://app.futureclinic.com/clinics/drporto/profile" class="btn-outline-light" target="_blank" rel="noopener" aria-label="Book a virtual consult (opens in new tab)">Book a consult</a>
+        </div>
         <div class="states-block">
           <span class="states-label">Licensed to practice in</span>
           <ul class="states-pills" role="list" aria-label="States where Dr. Porto is licensed">
@@ -615,7 +621,7 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
             <li class="cond-pill">Itching</li>
             <li class="cond-pill">Scars &amp; keloids</li>
           </ul>
-          <p style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:0.9rem;letter-spacing:0.02em;">Underlined conditions link to a detailed guide.</p>
+          <p style="font-size:12px;color:rgba(255,255,255,0.72);margin-top:1rem;letter-spacing:0.02em;">Underlined conditions link to a detailed guide. <a href="/conditions.html" style="color:#fff;text-decoration:underline;text-underline-offset:3px;">See all conditions treated →</a></p>
         </div>
       </div>
     </div>
@@ -659,14 +665,10 @@ a.cond-link:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(196,160,11
     <nav aria-label="Footer navigation">
       <ul class="footer-links" role="list">
         <li><a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener">Book a consult</a></li>
-        <li><a href="/acne.html">Acne</a></li>
-        <li><a href="/rosacea.html">Rosacea</a></li>
-        <li><a href="/eczema.html">Eczema</a></li>
-        <li><a href="/hair-loss.html">Hair loss</a></li>
-        <li><a href="/melasma.html">Melasma</a></li>
         <li><a href="https://regimenpro.com/account/register?practice=29805ca7-60d7-4f97-b243-d3e9016fd5c0" target="_blank" rel="noopener">Skincare products</a></li>
         <li><a href="https://www.mohs.surgery" target="_blank" rel="noopener">Mohs surgery</a></li>
         <li><a href="https://scholar.google.com/citations?user=V5cHTuYAAAAJ" target="_blank" rel="noopener">Publications</a></li>
+        <li><a href="/conditions.html">Conditions</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="/accessibility.html">Accessibility</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
