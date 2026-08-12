@@ -182,8 +182,8 @@
   --white:      #FFFFFF;
   --ink:        #1A1A18;
   --ink-mid:    #47453F;
-  --ink-light:  #87847C;
-  --gold:       #A07840;
+  --ink-light:  #6E6B64;
+  --gold:       #8A6634;
   --gold-light: #C4A070;
   --border:     rgba(26,26,24,0.10);
   --border-mid: rgba(26,26,24,0.18);
@@ -288,12 +288,12 @@ p { font-weight: 300; color: var(--ink-mid); }
 .btn-gold { display: inline-flex; align-items: center; padding: 14px 28px; background: var(--gold); color: var(--white); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; border-radius: 100px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
 .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
 .states-block { border-top: 0.5px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem; }
-.states-label { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.3); text-transform: uppercase; margin-bottom: 1rem; display: block; }
+.states-label { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.55); text-transform: uppercase; margin-bottom: 1rem; display: block; }
 .states-pills { display: flex; gap: 8px; flex-wrap: wrap; list-style: none; padding: 0; }
-.state-pill { font-size: 11px; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 100px; border: 0.5px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.55); }
+.state-pill { font-size: 11px; letter-spacing: 0.06em; padding: 5px 12px; border-radius: 100px; border: 0.5px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.72); }
 .consult-right { border-left: 1px solid rgba(255,255,255,0.12); padding-left: 3rem; display: flex; flex-direction: column; gap: 2rem; }
-.consult-fact-label { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.3); text-transform: uppercase; margin-bottom: 0.6rem; }
-.consult-fact-value { font-family: var(--serif); font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.8); line-height: 1.3; }
+.consult-fact-label { font-size: 10px; letter-spacing: 0.2em; color: rgba(255,255,255,0.55); text-transform: uppercase; margin-bottom: 0.6rem; }
+.consult-fact-value { font-family: var(--serif); font-size: 22px; font-weight: 300; color: rgba(255,255,255,0.88); line-height: 1.3; }
 .consult-divider { height: 0.5px; background: rgba(255,255,255,0.1); border: none; }
 
 /* FOOTER */
@@ -301,15 +301,15 @@ p { font-weight: 300; color: var(--ink-mid); }
 .footer-inner { max-width: 1060px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
 .footer-logo { font-size: 12px; font-weight: 500; letter-spacing: 0.22em; color: var(--white); text-decoration: none; }
 .footer-links { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; }
-.footer-links a { font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: rgba(255,255,255,0.75); }
-.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); width: 100%; }
+.footer-links a { font-size: 12px; letter-spacing: 0.07em; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: rgba(255,255,255,0.95); }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.5); width: 100%; }
 
 /* ACCESSIBILITY STATEMENT */
 .a11y-section { background: var(--cream); padding: 2.5rem 0; border-top: 0.5px solid var(--border); }
 .a11y-inner { max-width: 1060px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: baseline; gap: 2rem; flex-wrap: wrap; }
 .a11y-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-light); flex-shrink: 0; }
-.a11y-text { font-size: 12px; font-weight: 300; color: var(--ink-light); line-height: 1.7; max-width: 780px; }
+.a11y-text { font-size: 12px; font-weight: 300; color: var(--ink-mid); line-height: 1.7; max-width: 780px; }
 .a11y-text a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 
 /* RESPONSIVE */
@@ -619,7 +619,7 @@ p { font-weight: 300; color: var(--ink-mid); }
 <div id="accessibility" class="a11y-section" aria-labelledby="a11y-heading">
   <div class="a11y-inner">
     <span class="a11y-label" id="a11y-heading">Accessibility</span>
-    <p class="a11y-text">This site aims to conform to WCAG 2.1 Level AA. Features include keyboard navigation, screen reader compatibility, skip navigation, adjustable text size, high-contrast mode, and reduced-motion support. Read our full <a href="/accessibility.html">accessibility statement</a>, or <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener">report a barrier</a>.</p>
+    <p class="a11y-text">This site aims to conform to WCAG 2.1 Level AA. Features include keyboard navigation, screen reader compatibility, skip navigation, adjustable text size, high-contrast mode, and reduced-motion support. Read our full <a href="/accessibility.html">accessibility statement</a>.</p>
   </div>
 </div>
 
