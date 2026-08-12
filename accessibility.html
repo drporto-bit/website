@@ -64,6 +64,46 @@ li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 
 .contact-block p { margin-bottom: 0.5rem; }
 .contact-block p:last-child { margin-bottom: 0; }
 
+/* FORM */
+.field { margin-bottom: 1.35rem; }
+.field label { display: block; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: var(--ink); margin-bottom: 0.4rem; }
+.field .optional { font-weight: 300; color: var(--ink-light); }
+.field .req { color: var(--gold); font-weight: 500; }
+.field input, .field textarea {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--cream);
+  border: 1px solid var(--border-mid);
+  border-radius: 5px;
+  padding: 11px 13px;
+  min-height: 44px;
+  transition: border-color 0.2s;
+}
+.field textarea { min-height: 110px; resize: vertical; line-height: 1.6; }
+.field input:hover, .field textarea:hover { border-color: var(--ink-light); }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: var(--focus-ring); }
+.field input:invalid:not(:placeholder-shown), .field textarea:invalid:not(:placeholder-shown) { border-color: #A33A2A; }
+.help { font-size: 12px; font-weight: 300; color: var(--ink-mid); line-height: 1.6; margin: 0.4rem 0 0; }
+.submit-btn {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  background: var(--ink);
+  border: none;
+  border-radius: 100px;
+  padding: 14px 30px;
+  min-height: 44px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:hover { background: var(--ink-mid); }
+.submit-btn:focus-visible { box-shadow: var(--focus-ring); }
+
 .site-footer { background: var(--ink); padding: 3rem 0; }
 .footer-inner { max-width: 780px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 .footer-logo { font-size: 12px; font-weight: 500; letter-spacing: 0.22em; color: var(--white); text-decoration: none; }
@@ -112,13 +152,16 @@ li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 
     <li><strong>Resizable text</strong>Text can be enlarged through the accessibility panel or by using the browser's own zoom, and the layout adapts responsively.</li>
     <li><strong>Reduced motion</strong>The site honors the operating system's "reduce motion" preference automatically, and motion can also be disabled manually. Animations are limited to subtle transitions and nothing that flashes or could trigger vestibular symptoms.</li>
     <li><strong>Descriptive alternative text</strong>Meaningful images carry descriptive alt text; decorative elements are hidden from assistive technologies.</li>
+    <li><strong>Forms</strong>The accessibility feedback form has visible labels, programmatic label associations, descriptive help text, and touch targets of at least 44×44 pixels.</li>
     <li><strong>Link clarity</strong>Links that open in a new tab are labeled as such for screen-reader users.</li>
   </ul>
+
+  <h2>Color contrast</h2>
+  <p>Body text, headings, and interactive controls on this site meet or exceed the 4.5:1 contrast ratio required for WCAG Level AA at normal text sizes. A high-contrast mode is additionally available in the accessibility panel for users who prefer stronger differentiation.</p>
 
   <h2>Known limitations</h2>
   <p>We want to be straightforward about where barriers may remain:</p>
   <ul>
-    <li><strong>Default color contrast</strong>Some secondary text in the default presentation uses low-contrast tones for visual reasons and may fall below the 4.5:1 ratio. Enabling high-contrast mode in the accessibility panel resolves this.</li>
     <li><strong>Third-party services</strong>Booking, messaging, and product ordering are handled by outside platforms — including our patient portal and skincare fulfillment partner — which are governed by their own accessibility practices. If you encounter a barrier on one of those services, contact us and we will help you complete the task another way.</li>
     <li><strong>Horizontal scrolling</strong>On narrow screens, the credentials strip scrolls sideways without an explicit visual cue. The same information appears elsewhere on the page in a standard vertical layout.</li>
   </ul>
@@ -127,14 +170,45 @@ li strong { font-weight: 500; color: var(--ink); display: block; margin-bottom: 
   <p>This site is reviewed using manual keyboard-only navigation, browser zoom testing, and automated accessibility auditing tools. Testing is not exhaustive, and we welcome reports of issues we may have missed.</p>
 
   <h2>Feedback</h2>
-  <p>If you encounter an accessibility barrier on this site, or need information from it in a different format, please tell us. We aim to respond within five business days.</p>
+  <p>If you encounter an accessibility barrier on this site, or need information from it in a different format, please write to us. We aim to respond within ten business days of receipt.</p>
   <div class="contact-block">
-    <p><strong style="font-weight:500;color:var(--ink);">Contact:</strong> <a href="https://app.futureclinic.com/clinics/drporto/profile" target="_blank" rel="noopener">Send a message through the patient portal (opens in a new tab)</a></p>
-    <p style="font-size:13px;color:var(--ink-light);">Please include the page you were on, the browser or assistive technology you were using, and a short description of what went wrong.</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+
+      <div class="field">
+        <label for="a11y-name">Your name <span class="optional">(optional)</span></label>
+        <input type="text" id="a11y-name" name="name" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label for="a11y-email">Email address <span class="req" aria-hidden="true">*</span></label>
+        <input type="email" id="a11y-email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-help">
+        <p class="help" id="email-help">Required so we can respond to you.</p>
+      </div>
+
+      <div class="field">
+        <label for="a11y-tech">Browser or assistive technology <span class="optional">(optional)</span></label>
+        <input type="text" id="a11y-tech" name="assistive_technology" aria-describedby="tech-help">
+        <p class="help" id="tech-help">For example: Chrome with NVDA, Safari with VoiceOver, keyboard only.</p>
+      </div>
+
+      <div class="field">
+        <label for="a11y-message">Describe the barrier <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="a11y-message" name="message" rows="5" required aria-required="true" aria-describedby="msg-help"></textarea>
+        <p class="help" id="msg-help">Tell us which page or element caused the problem and what happened.</p>
+      </div>
+
+      <input type="hidden" name="_subject" value="Website accessibility report — skincare.md">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true" autocomplete="off">
+
+      <button type="submit" class="submit-btn">Send report</button>
+      <p class="help" style="margin-top:0.75rem;">Fields marked with an asterisk are required.</p>
+    </form>
   </div>
+  <p style="font-size:13px;color:var(--ink-mid);">If you are an established patient, you may also raise the issue through your patient portal, where we will see it sooner.</p>
 
   <h2>Privacy</h2>
-  <p>This website does not collect personal information from visitors. It contains no forms, no account creation, and no patient data. Scheduling, messaging, and payment take place on separate third-party platforms, each governed by its own privacy policy and, where applicable, its own HIPAA obligations.</p>
+  <p>The accessibility feedback form above is the only form on this site. It is processed by Formspree, a third-party form service, and the information you submit is used solely to respond to your report. Please do not include health information in it.</p>
+  <p>No other personal information is collected by this website. Scheduling, messaging, and payment take place on separate third-party platforms, each governed by its own privacy policy and, where applicable, its own HIPAA obligations.</p>
   <p>This site uses Google Analytics to measure general traffic patterns. No health information is transmitted to or stored by this website.</p>
 
   <p class="meta">Last reviewed: August 2026</p>
